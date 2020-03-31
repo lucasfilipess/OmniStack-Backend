@@ -5,7 +5,7 @@ module.exports = {
     const { page = 1 } = request.query;
 
     const [count] = await connection('incidents').count(); // conta minha quantidade de registros,[] ja que ele me retorna um objeto e eu so quero o 1 elemento então count[0] tambem funcionariaa
-    console.log(count);
+    // console.log(count);
 
     const incidents = await connection('incidents') //limito a minha pagia a 5 registros por vex
       .join('ongs', 'ongs.id', '=', 'incidents.ong_id') //faz um join com a tabela de ongs para retornar os dados da ong cujo id é igual ao do incident

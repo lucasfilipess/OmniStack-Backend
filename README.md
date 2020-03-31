@@ -76,6 +76,8 @@ Quando eu tenho algum dado cruzado com uma foreign key que depende do usuário e
 
 ===> DATABASE
 
+npx para executar o pacote knex
+
 SQL: MySQL, PostgreSQL, Oracle, SQL Server, SQLite
 NoSQL: MongoDB, CouchDB
 
@@ -102,5 +104,35 @@ Dica => Para pensar nas minhas tabelas do banco primeiro olho minhas entidades, 
 Para criar as tabelas o knex tem a ferramenta de migrations, assim tem que configurar o knex.js para acessar as pastas de migrations
 
 Depois de criar a migration para criar as tabelas e tudo mais olhar a documentação do knex
+
+------------------------------------------------------ // ------------------------------------------------------
+
+===> VALIDAÇÃO
+
+Biblioteca chamada celebrate que integra o hapi/joi (outra biblioteca de autenticação) com o express
+
+npm install celebrate
+
+------------------------------------------------------ // ------------------------------------------------------
+
+===> TESTES TDD (Desenvolvimento dirigido a testes)
+
+Biblioteca chamada jest que permite fazer testes na aplicação (React, React Native, noode)
+
+npm install jest -D
+
+npx jest --init => colocar os testes no scrip, rodar no node ou no browser
+
+Teste Unitário => testa uma função muito específica.
+ 
+npm test => Para iniciar um teste, ele encontra o teste automaticamente na extensão nome.spec.js
+
+criar uma nova conexão com o banco para fazer um bd de testes
+
+npm install cross-env => fazer o banco identificar qual é o ambiente de teste 
+
+vai no package. json e altera para quando for teste utilizar o banco de testes usando uma variavel de ambiente NODE_ENV
+
+npm install supertest -D => biblioteca para requisições de teste (-D dependencia de desenvolvimento ja que não iremos usar para mais além disso )
 
 ------------------------------------------------------ // ------------------------------------------------------
