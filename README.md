@@ -16,10 +16,10 @@ SQLite
 
 npm => gerenciador de pacotes do node, já vem instalado com ele.
 npx => executa um pacote ao invés de instala-lo.
-npm int => Cria package.json do back.
+npm init => Cria package.json do back.
 npm express => Instala o express que é usado para as requisições.
 node 'nome de arquivo' => roda a aplicação.
-npm install nodemon -D => instala o nodemon em ambiente de desenvolvimento ja que não é necessário em produção.(Cria um scrip de start dentro do package.json para dar start no nodemon ja no arquivo raiz) ex:
+npm install nodemon -D => instala o nodemon em ambiente de desenvolvimento ja que não é necessário em produção.(Criar um scrip de start dentro do package.json para dar start no nodemon ja no arquivo raiz) ex:
 
 "scripts": {
 "test": "echo \"Error: no test specified\" && exit 1",
@@ -39,9 +39,9 @@ npx knex init => cria um arquivo knexfile.js onde vão ser feitas as configuraç
 
 npx knex migrate:make 'nome da migration' => cria minha migration
 
-npx knex migrate:latest => executa a migration e cria ou altera a tabela(s) da migration
+npx knex migrate:latest => executa a migration e cria ou altera a(s) tabela(s) da migration
 
-npm isntall cors => CORS é o módulo de segurança para que outros não consigam acessar nossa aplicação
+npm isntall cors => CORS é o módulo de segurança para que outros não consigam acessar a aplicação
 ------------------------------------------------------ // ------------------------------------------------------
 
 ===> ROTAS E METODOS HTTP
@@ -54,7 +54,7 @@ app.use(express.json()); Estou "falando" que as minhas requisições vão ser em
 
 const routes = express.Router(); =>Por exemplo aqui dou a variável routes o módulo de rotas do express
 
-app -> const criada, .get é um atribulto do express para fazer requisições GET. '/' é a rora chamada de recurso e indica que o get vai ser feito na minha rota principal, se fosse '/nome' seria rota nome, (rota/recurso). Request guarda todos os dados que vêm da minha requisição o que é requirido e o response é mimha resposta ao request.
+app -> const criada, .get é um atribulto do express para fazer requisições GET. '/' é a rota chamada de recurso e indica que o get vai ser feito na minha rota principal, se fosse '/nome' seria a rota nome, (rota/recurso). Request guarda todos os dados que vêm da minha requisição o que é requirido, e o response é mimha resposta ao request.
 
 Métodos HTTP
 GET: Buscar/listar uma informação do backend
@@ -90,7 +90,7 @@ Query Builder: As query's são feitas em JavaScript (table('users').select('\*')
 Query Builder: Knex.js
 DB: SQLite
 
-No arquivo knexfile.js eu tenho as minhas conexões com o banco, nos ambientes de dev, produção e outros, como so vou usar o de dev as minhas credenciais so estão config nele
+No arquivo knexfile.js eu tenho as minhas conexões com o banco, nos ambientes de dev, produção e outros, como so vou usar o de dev as minhas credenciais so estão configuradas nele
 
 development: {
 client: 'sqlite3',
@@ -109,7 +109,7 @@ Depois de criar a migration para criar as tabelas e tudo mais olhar a documenta�
 
 ===> VALIDAÇÃO
 
-Biblioteca chamada celebrate que integra o hapi/joi (outra biblioteca de autenticação) com o express
+Biblioteca chamada celebrate que integra o hapi/joi (biblioteca de autenticação) com o express
 
 npm install celebrate
 
